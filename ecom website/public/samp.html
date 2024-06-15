@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>E-commerce website
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 253, 253);
+            overflow-x: hidden;
+        }
+        .top{
+            justify-content: space-evenly;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(255, 255, 255);
+        }
+        .top span{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-left: 900px;
+        }
+        .top a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 10px;
+            margin-top: 10px;
+        }
+        .top a:hover{
+            cursor: pointer;
+            transition: transform 1s;
+        }
+        .top img{
+            margin-top: 15px;
+        }
+        header {
+            background-color: #ffffff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin: 7px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        nav {
+            /* background-color: #7a0404;
+            padding: 5px;
+            margin: 8px; */
+            text-align: left;
+            flex-grow: 1;
+            display: flex;
+            justify-content: start;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        .navbar .social{
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 300px;
+            margin-bottom: 1px;
+        }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 8px;
+        }
+
+        .social{
+            max-width: 100px;
+            max-height: 50px;
+            font-size: 30px;
+            color: #040608;
+            margin-right: 250px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: space-evenly;
+        }
+        .social a:hover{
+            background-color: hsl(0, 62%, 16%);
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+        .navbar a:hover{
+            background-color: hsl(0, 62%, 16%);
+            color:#ffffff;
+        }
+        .logo img{
+            cursor: pointer;
+            width: 100%;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 500px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+            color: white;
+            font-size: 40px;
+            font-family: Arial, sans-serif;
+            margin-left: 800px;
+            margin-top: -200px;
+        }
+        .text-overlay button{
+            background-color: #050505;
+            color: #fff;
+            padding: 20px 60px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .big-image {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+            height: 300px;
+            cursor:pointer;
+        }
+        .front{
+            align-items: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .extra{
+            margin:5px;
+            padding: 5px;
+            background-color:rgba(121, 121, 121, 0.829);
+            justify-content: space-evenly;
+            cursor:pointer;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            padding: 100px;
+        }
+        .section{
+            /* margin: 200px;
+            padding: 30px; */
+            /* background-color: #fff; */
+            justify-content: space-between;
+            align-items:center;
+            display: flex;
+            flex-direction: row;
+        }
+        .section img{
+            background-color: #9e939393;
+            margin: 10px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        section img:hover{
+            transform:translateY(-10px);
+        }
+        .A:hover{
+            background-color: #cca2b2;
+        }
+        .B:hover{
+            background-color:#cca2b2;
+        }
+        .C:hover{
+            background-color:#cca2b2;
+
+        }
+        .section .p0 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align:center;
+            row-gap: 10px;
+        }
+        .section .p1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align:center;
+            row-gap: 10px;
+        }
+        .section .p2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align:center;
+            row-gap: 10px;
+        }
+        .section .p0 span {
+            display: inline-block;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+        }
+       
+        .section .p1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align:center;
+            row-gap: 10px;
+        }
+        .section .p1 span {
+            display: inline-block;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+        }
+        .section .p2 span {
+            display: inline-block;
+            vertical-align: middle;
+            display: flex;
+            flex-direction: row;
+        }
+        .section .p0 button{
+            background-color: #050505;
+            color: #fff;
+            padding: 10px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .section .p1 button{
+            background-color: #050505;
+            color: #fff;
+            padding: 10px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .section .p2 button{
+            background-color: #050505;
+            color: #fff;
+            padding: 10px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .product {
+            background-color: #c6cfcff5;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            height: 280px;
+            text-align: center;
+        }
+        .product:hover{
+            color: #142135;
+            transform:translateY(-10px);
+
+        }
+        .product img{
+            cursor: pointer;
+        }
+        .product button{
+            background-color: #050505;
+            color: #fff;
+            padding: 10px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+       .discount{
+             margin: 5px;
+             padding:10px;
+             background-color: red;
+             text-align: center;
+            justify-content: center;
+            
+        }
+        .discount span{
+            display: inline-block;
+        }
+        .iconss {
+            max-width: 100px;
+            max-height: 50px;
+            font-size: 30px;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            column-gap: 50px;
+        }
+        .iconss a{
+            color:#000000;
+        }
+        .iconss:hover{
+            cursor: pointer;
+        }
+        .red-line {
+            border: 1px solid red;
+            margin: 5px 0;
+        }
+        .gray-line {
+            border: 1px solid rgba(75, 74, 74, 0.541);
+            margin: 5px 0;
+        }
+        footer {
+            color: #070707;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* background-color: #5c5b5bb2; */
+        }
+        .foot{
+            align-items: left;
+            font-family:'Gill Sans';
+        }
+        .foot span{
+        color: #353434;
+        font-size: small;
+        }
+        .endd{
+        margin-left: 1000px;
+        justify-content: center;
+        cursor: pointer;
+        margin-top: -15px;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav class="top">
+            <img src="./assets/img/IMG-20231122-WA0004 2.png" width="80" height="50">
+            <span>
+                <p>English</p>
+                <a href="#"><i class='bx bxs-chevron-down'></i></a>
+                <img src="./assets/img/united-states-of-america.png" width="30" height="20">
+                <p>USD</p>
+                <a href="#"><i class='bx bxs-chevron-down'></i></a>
+            </span>
+            <header>
+        </nav>
+        <nav class="navbar">
+            <a href=""><i class='bx bx-menu'></i></a>
+            <a href="#">ALL</a>
+            <a href="#">TODAY DEAL</a>
+            <a href="#">HELP CENTER</a>
+            <a href="#">BECOME A SELLER</a>
+        <div class="social">
+            <a href=""><i class='bx bx-search'></i></a>
+            <a href=""><i class='bx bx-user-circle' ></i></a>
+            <a href=""><i class='bx bx-heart' ></i></a>
+            <a href=""><i class='bx bx-basket'></i></a>
+            <a href=""><i class='bx bx-bell'></i></a>
+        </div>
+        
+    </nav>
+    
+    </header>
+    <div class="front">
+    <div class="logo">
+        <img src="https://img.freepik.com/free-photo/smiling-beautiful-female-model-demonstrating-horizontal-smartphone-screen-mobile-application-standing-beige-background_1258-126034.jpg?w=996&t=st=1707042210~exp=1707042810~hmac=91f14c24342f8f1ebc57abc142123754af94a376f94d9bfa3c9a39872aad5a0d" width="1300" />
+        <div class="text-overlay">
+            <p>New Stocks</p>
+            <h2>Revamp your Wardrobe</h2>
+            <button>Get Started →</button>
+        </div>
+      </div>
+    <section>
+        <img src="https://img.freepik.com/free-photo/minimalist-business-desk-arrangement-high-angle_23-2149073026.jpg?w=360&t=st=1707029565~exp=1707030165~hmac=07c394ed88e7dc25fa0fcc484ccc56377ae4700a782fffa2bba3518a0134eb10" alt="Big Image" class="big-image">
+
+        <div class="product">
+            <img src="./assets/img/2watch.png" width="150" >
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $19.99</p>
+            <button>Add to Cart</button>
+            
+        </div>
+
+        <div class="product">
+            <img src="./assets/img/tshirt.png" width="80">
+            <h2>Black YAHWEH T-shirt</h2>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="./assets/img/lap.png" width="150">
+            <h2>Mac Book 2013</h2>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+    <section class="extra">
+        <img src="https://img.freepik.com/free-photo/sale-with-special-discount-headphones_23-2150040377.jpg?w=740&t=st=1707049016~exp=1707049616~hmac=3d9b84a5943c2ef5fc2b5d12aecf7662c9f5b5bb9c9c813cfc4b2c3a7f5cda70" width="300">
+        <img src="https://img.freepik.com/free-vector/realism-hand-drawn-horizontal-banner_23-2150203461.jpg?w=996&t=st=1707054787~exp=1707055387~hmac=7a950de2ecc0fd24e64d078c05e6aca968d76be212b37fa5f1844ba6bc21ed0f" width="300">
+    </section>
+    <section class="section">
+        <div class="p0">
+            <h1>Top rated</h1>
+            <span>
+            <img src="./assets/img/2watch.png" width="100" height="100">
+            <div class="A">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $19.99</p>
+            <button>Add to Cart</button>
+            </div>
+            </span>
+            <span>
+            <img src="./assets/img/2watch.png" width="100" height="100">
+            <div class="B">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+            </div>
+            </span>
+            <span>
+            <img src="./assets/img/2watch.png" width="100" height="100">
+            <div class="C">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+            </div>
+            </span>
+        </div>
+        <div class="p1">
+            <h1>Best Selling</h1>
+            <span>
+            <img src="./assets/img/2watch.png" width="100" height="100" >
+            <div class="A">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $19.99</p>
+            <button>Add to Cart</button>
+            </div>
+            </span>
+            <span>
+            <img src="./assets/img/2watch.png" width="100" height="100">
+            <div class="B">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+            </div>
+            </span>
+            <span>
+            <img src="./assets/img/2watch.png" width="100" height="100">
+            <div class="A">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+            </div>
+            </span>
+        </div>
+        <div class="p2">
+            <h1>On Sale</h1>
+        <span>
+            <img src="./assets/img/2watch.png" width="100" height="100">
+        <div class="A">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $19.99</p>
+            <button>Add to Cart</button>
+        </div>
+            </span>
+        <span>
+            <img src="./assets/img/2watch.png" width="100" height="100">
+        <div class="B">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        </span>
+        <span>
+            <img src="./assets/img/2watch.png" width="100" height="100">
+        <div class="C">
+            <h2>Slick Wrist Watch</h2>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        </span>
+        </div>
+    </section>
+    <section class="discount">
+        <span>Upto 80% discount on all sales-<u>Get it now</u></span>
+    </section>
+    <section class="iconss">
+        <a href=""><i class='bx bx-chevron-left-circle'></i></a>
+        <img src="./assets/img/Frame 750.png">
+        <a href=""><i class='bx bx-chevron-right-circle' ></i></a>
+    </section>
+    <div class="red-line"></div>
+    <section class="info">
+        <img src="./assets/img/IMG-20231122-WA0004 2.png" width="100" height="100">
+        <span>
+        <h4>Product</h4>
+        <p>Overview</p>
+        <p>Features</p>  
+        <p>Pricing</p>
+        <p>Release</p>
+        </span>
+        <span>
+            <h4>Product</h4>
+            <p>Overview</p>
+            <p>Features</p>  
+            <p>Pricing</p>
+            <p>Release</p>
+            </span>
+            <span>
+                <h4>Company</h4>
+                <p>About</p>
+                <p>Careers</p>  
+                <p>Press</p>
+                <p>News</p>
+                </span>
+                <span>
+                    <h4>Resources</h4>
+                    <p>Blog</p>
+                    <p>News letter</p>  
+                    <p>Start Selling</p>
+                    <p>FAQ</p>
+                    </span>
+    </section>
+    <div class="gray-line"></div>
+</div>
+    <footer>
+        <div class="foot">
+        <p>With Sila there's no Limitation to expectation</p>
+        <span>NO restrictions on affordable deals you can get</span>
+        </div>
+        <div class="endd">
+        <b>&copy; 2024 SILA,All rights reserved</b>
+    </div>
+    </footer>
+</body>
+</html>
